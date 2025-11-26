@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Car Racing Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Start Menu -->
+  <div id="startScreen">
+    <h1>🚗 Car Racing Game</h1>
+    <button id="startBtn">Start Game</button>
+  </div>
+
+  <!-- Game Over Screen -->
+  <div id="gameOverScreen">
+    <h1>💥 Crash!</h1>
+    <p>Your Score: <span id="finalScore">0</span></p>
+    <button id="restartBtn">Restart</button>
+  </div>
+
+  <!-- Game Area -->
+  <div id="gameContainer">
+    <div id="road">
+      <div id="player"></div>
+
+      <!-- Lane Lines -->
+      <div class="lane"></div>
+      <div class="lane"></div>
+      <div class="lane"></div>
+
+      <!-- Enemies -->
+      <div class="enemy"></div>
+      <div class="enemy"></div>
+      <div class="enemy"></div>
+    </div>
+  </div>
+
+  <!-- Score -->
+  <div class="score">Score: <span id="score">0</span></div>
+
+  <!-- Mobile controls -->
+  <div id="controls">
+    <button id="leftBtn">⬅</button>
+    <button id="rightBtn">➡</button>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>

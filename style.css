@@ -1,0 +1,116 @@
+body {
+  background: #111;
+  color: #fff;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+}
+
+#gameContainer {
+  width: 320px;
+  height: 550px;
+  margin: 20px auto;
+  border: 3px solid #06b6d4;
+  position: relative;
+  overflow: hidden;
+  background: #000;
+}
+
+#road {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* Player Car */
+#player {
+  width: 50px;
+  height: 90px;
+  background: #00eaff;
+  position: absolute;
+  bottom: 20px;
+  left: 135px;
+  border-radius: 6px;
+}
+
+/* Enemy Cars */
+.enemy {
+  width: 50px;
+  height: 90px;
+  background: #ec4899;
+  position: absolute;
+  border-radius: 6px;
+}
+
+/* Lane Lines */
+.lane {
+  width: 6px;
+  height: 80px;
+  background: white;
+  position: absolute;
+  left: 157px;
+  opacity: 0.5;
+  animation: moveLane 1s linear infinite;
+}
+
+.lane:nth-child(2) { top: -200px; }
+.lane:nth-child(3) { top: -400px; }
+
+@keyframes moveLane {
+  0% { top: -100px; }
+  100% { top: 600px; }
+}
+
+/* Score */
+.score {
+  margin-top: 10px;
+  font-size: 1.4rem;
+}
+
+/* Start + Game Over Screens */
+#startScreen,
+#gameOverScreen {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.9);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-size: 1.6rem;
+  z-index: 1000;
+}
+
+#startBtn,
+#restartBtn {
+  padding: 10px 20px;
+  font-size: 1.3rem;
+  background: #06b6d4;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#startScreen { display: flex; }
+#gameOverScreen { display: none; }
+
+/* Mobile Controls */
+#controls {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+#controls button {
+  width: 80px;
+  height: 80px;
+  font-size: 2rem;
+  background: #222;
+  border: 3px solid #06b6d4;
+  border-radius: 50%;
+  color: white;
+}
