@@ -114,3 +114,12 @@ body {
   border-radius: 50%;
   color: white;
 }
+
+p {
+  color:white;
+}
+p a{
+  color:yellow;
+  text-decoration: none;
+}
+
